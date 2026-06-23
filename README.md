@@ -1,472 +1,281 @@
-# 🚀 Agentic AI Mastery - Day 1 & Day 2
+Use this shorter, cleaner README till **Day 4**:
 
-> Building AI Agents from Scratch → LangChain Structured Router Agents
+````md
+# 🚀 Agentic AI Mastery
 
----
+A hands-on journey to master **AI Agents, RAG, LangChain, LangGraph, and production-style LLM workflows**.
 
-## 📌 Overview
-
-This repository contains my Day 1 and Day 2 journey of learning Agentic AI from fundamentals to production-style structured agents.
-
-### Day 1
-
-Built a Tool Calling AI Agent from scratch using NVIDIA Llama.
-
-### Day 2
-
-Built a Production-Style LangChain Structured Router Agent using:
-
-* LangChain
-* NVIDIA Llama 3.3 70B
-* Pydantic Structured Output
-* Tool Routing
-* Logging
-* Safe Calculator (AST)
-* Modular Agent Architecture
+This repo is focused on learning by building — from a basic tool-calling agent to self-correcting LangGraph workflows.
 
 ---
 
-# 🎯 Learning Objectives
+## 📌 Progress
 
-### Day 1
-
-Understanding:
-
-```text
-LLM
-↓
-Tool Calling
-↓
-Agent Loop
-↓
-Reasoning
-↓
-Final Answer
-```
-
-### Day 2
-
-Understanding:
-
-```text
-LangChain
-↓
-Prompt Templates
-↓
-Structured Output
-↓
-Pydantic
-↓
-Router Agent
-↓
-Tool Execution
-↓
-Logging
-```
+| Day | Project | Core Learning |
+|---|---|---|
+| Day 1 | Tool Calling AI Agent | LLM + tools + agent loop |
+| Day 2 | LangChain Structured Router Agent | Pydantic routing + modular tools |
+| Day 3 | Advanced PDF RAG Agent | PDF ingestion + ChromaDB + citations |
+| Day 4 | LangGraph Self-Correcting Workflow | StateGraph + retries + critic loop |
 
 ---
 
-# 🏗️ Project Structure
+## 🧠 What I Built
 
-```text
-Agentic-AI-Mastery/
-│
-├── day1_ai_agent/
-│   ├── main.py
-│   ├── llm.py
-│   ├── tools.py
-│   ├── agent.py
-│   ├── prompts.py
-│   └── .env
-│
-├── langchain_agent/
-│   ├── main.py
-│   ├── llm.py
-│   ├── schemas.py
-│   ├── logger.py
-│   ├── prompts.py
-│   ├── .env
-│   │
-│   ├── logs/
-│   │
-│   ├── tools/
-│   │   ├── calculator.py
-│   │   ├── search.py
-│   │   ├── summarizer.py
-│   │   └── code_helper.py
-│   │
-│   └── agents/
-│       ├── router_agent.py
-│       └── research_agent.py
-│
-└── README.md
-```
+### Day 1 — Tool Calling AI Agent
 
----
+Built an AI agent from scratch using NVIDIA Llama.
 
-# 🧠 Day 1 - Tool Calling AI Agent
+**Learned:**
+- LLM vs Agent
+- Tool calling
+- JSON routing
+- Agent loop
+- Calculator, search, and time tools
 
-## Features
-
-✅ NVIDIA Llama Integration
-
-✅ Tool Calling
-
-✅ JSON-Based Routing
-
-✅ Calculator Tool
-
-✅ Search Tool
-
-✅ Time Tool
-
-✅ Final Answer Generation
-
-✅ CLI Interface
-
----
-
-## Agent Flow
+**Flow:**
 
 ```text
 User Query
 ↓
-Router Prompt
-↓
-Tool Selection
+Tool Decision
 ↓
 Tool Execution
 ↓
 Observation
 ↓
 Final Answer
-```
+````
 
 ---
 
-## Example
+### Day 2 — LangChain Structured Router Agent
 
-### Input
+Built a production-style router agent using LangChain and Pydantic.
+
+**Learned:**
+
+* LangChain chat models
+* Structured output
+* Pydantic validation
+* Router agents
+* Safe AST-based calculator
+* Logging and modular architecture
+
+**Routes:**
 
 ```text
-calculate 45 * 12 + 90
+Math Query     → Calculator Tool
+Research Query → Search Tool
+Coding Query   → Code Helper Tool
+Summary Query  → Summarizer Tool
 ```
 
-### Tool Selection
+---
 
-```json
-{
-  "tool": "calculator",
-  "tool_input": "45 * 12 + 90"
-}
-```
+### Day 3 — Advanced PDF RAG Agent
 
-### Output
+Built a PDF-based RAG backend with FastAPI and ChromaDB.
+
+**Learned:**
+
+* PDF ingestion
+* Chunking with overlap
+* Embeddings
+* Vector databases
+* MMR retrieval
+* Citation-based answers
+* FastAPI endpoints
+
+**Flow:**
 
 ```text
-630
+PDF Upload
+↓
+Text Extraction
+↓
+Chunking
+↓
+Embeddings
+↓
+ChromaDB
+↓
+Retriever
+↓
+LLM Answer + Citations
 ```
 
 ---
 
-# 🧠 Day 2 - LangChain Structured Router Agent
+### Day 4 — LangGraph Self-Correcting Workflow
 
-## Features
+Built a self-correcting research workflow using LangGraph.
 
-✅ LangChain
+**Learned:**
 
-✅ ChatNVIDIA
+* StateGraph
+* Nodes and edges
+* Conditional routing
+* Retry loops
+* Critic node
+* State management
+* Production-style workflow logs
 
-✅ Structured Output
-
-✅ Pydantic Validation
-
-✅ Safe AST Calculator
-
-✅ Research Tool
-
-✅ Coding Tool
-
-✅ Summarizer Tool
-
-✅ Logging
-
-✅ Modular Architecture
-
----
-
-## Architecture
+**Flow:**
 
 ```text
 User Query
 ↓
-Router Agent
+Planner Node
 ↓
-Pydantic Schema
+Research Node
 ↓
-Route Selection
+Critic Node
 ↓
-Tool Execution
+If weak → Retry Node → Research Again
 ↓
-Tool Output
-↓
-Final LLM Answer
-↓
-Logging
+If good → Final Answer
 ```
 
 ---
 
-# 📦 Routes Supported
-
-### Research
-
-Examples:
+## 🏗️ Repository Structure
 
 ```text
-Explain RAG
-What is LangGraph?
-Explain AI Agents
+Agentic-AI-Mastery/
+│
+├── day1_ai_agent/
+├── langchain_agent/
+├── rag_agent/
+├── langgraph_workflow/
+└── README.md
 ```
 
 ---
 
-### Coding
-
-Examples:
-
-```text
-Give binary search code
-Java DFS template
-Python heap implementation
-```
-
----
-
-### Math
-
-Examples:
-
-```text
-45 * 12
-100/5 + 7
-```
-
----
-
-### Summary
-
-Examples:
-
-```text
-Summarize this paragraph
-```
-
----
-
-### General
-
-Fallback route.
-
----
-
-# 🔐 Safe Calculator
-
-Instead of:
-
-```python
-eval()
-```
-
-Used:
-
-```python
-ast.parse()
-```
-
-Benefits:
-
-```text
-Safer
-Production-friendly
-Prevents arbitrary code execution
-```
-
----
-
-# 🛠️ Tech Stack
-
-### LLM
-
-* NVIDIA Llama 3.3 70B
-
-### Frameworks
-
-* LangChain
-* Pydantic
-
-### Language
+## 🛠️ Tech Stack
 
 * Python
-
-### Concepts
-
-* Tool Calling
-* Structured Output
-* Agent Routing
-* Prompt Engineering
-* Observability
-* Logging
-
----
-
-# 📚 Concepts Learned
-
-## Day 1
-
-* LLM vs Agent
-* Tool Calling
-* ReAct Pattern
-* Agent Loop
-* JSON Outputs
-* Routing
-
----
-
-## Day 2
-
+* NVIDIA Llama / ChatNVIDIA
 * LangChain
+* LangGraph
 * Pydantic
-* Structured Outputs
-* Router Agents
-* AST Parsing
-* Logging
-* Modular Design
-* Separation of Concerns
+* FastAPI
+* ChromaDB
+* HuggingFace Embeddings
+* Docker-ready architecture
 
 ---
 
-# 🚀 Setup
+## ⚙️ Setup
 
-## Clone Repository
+Clone the repo:
 
 ```bash
 git clone https://github.com/yourusername/Agentic-AI-Mastery.git
-
 cd Agentic-AI-Mastery
 ```
 
----
-
-## Create Environment
+Create environment:
 
 ```bash
 python -m venv venv
 ```
 
-### Windows
+Activate:
 
 ```bash
+# Windows
 venv\Scripts\activate
-```
 
-### Linux / Mac
-
-```bash
+# Mac/Linux
 source venv/bin/activate
 ```
 
----
-
-## Install Dependencies
+Install dependencies inside each project folder:
 
 ```bash
-pip install langchain
-pip install langchain-core
-pip install langchain-nvidia-ai-endpoints
-pip install python-dotenv
-pip install pydantic
+pip install -r requirements.txt
 ```
 
----
-
-## Environment Variables
-
-Create:
+Create `.env` from `.env.example`:
 
 ```env
-NVIDIA_API_KEY=your_api_key
+NVIDIA_API_KEY=your_nvidia_api_key
 NVIDIA_MODEL=meta/llama-3.3-70b-instruct
 ```
 
 ---
 
-# ▶️ Run Day 1
-
-```bash
-cd day1_ai_agent
-
-python main.py
-```
-
----
-
-# ▶️ Run Day 2
-
-```bash
-cd langchain_agent
-
-python main.py
-```
-
----
-
-# 💡 Key Takeaways
+## ▶️ Run Projects
 
 ### Day 1
 
-Learned how AI agents:
-
-```text
-Think
-↓
-Choose Tool
-↓
-Execute
-↓
-Observe
-↓
-Respond
+```bash
+cd day1_ai_agent
+python main.py
 ```
-
----
 
 ### Day 2
 
-Learned how production systems use:
+```bash
+cd langchain_agent
+python main.py
+```
 
-```text
-LangChain
-Pydantic
-Structured Outputs
-Safe Tools
-Logging
-Modular Design
+### Day 3
+
+```bash
+cd rag_agent
+python app.py
+```
+
+For API:
+
+```bash
+uvicorn api:app --reload
+```
+
+### Day 4
+
+```bash
+cd langgraph_workflow
+python main.py
 ```
 
 ---
 
-# 🎯 Next Goals
+## 🎯 Key Concepts Covered
 
-* RAG Systems
-* ChromaDB
+* AI Agents
+* Tool Calling
+* Router Agents
+* Structured Output
+* Pydantic Validation
+* RAG
+* Embeddings
 * Vector Databases
+* ChromaDB
+* FastAPI
 * LangGraph
-* Multi-Agent Systems
-* FastAPI Agents
-* Agent Memory
-* Agent Evaluation
-* ResearchPilot AI (Production Project)
+* StateGraph
+* Conditional Edges
+* Retry Loops
+* Critic-Based Self-Correction
+
+---
+
+## 📌 Learning Outcome
+
+By Day 4, I built the foundation of production-style Agentic AI systems:
+
+```text
+LLM Apps
+→ Tool Calling Agents
+→ Structured Router Agents
+→ RAG Systems
+→ Self-Correcting LangGraph Workflows
+```
 
 ---
 
@@ -476,8 +285,13 @@ Modular Design
 
 AI Engineer | Machine Learning Engineer | Computer Vision Engineer
 
-* 500+ LeetCode Problems
 * AI Research Intern
-* Computer Vision & Agentic AI Enthusiast
+* Computer Vision + Agentic AI Enthusiast
+* 500+ LeetCode Problems
 
-⭐ If you found this useful, consider giving the repository a star.
+---
+
+⭐ If this repo helps you, feel free to star it.
+
+```
+```
