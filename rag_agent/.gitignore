@@ -1,0 +1,35 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Logs
+logs/*.log
+logs/*.txt
+
+# Uploaded PDFs
+uploads/*
+!uploads/.gitkeep
+
+# Local PDFs
+data/pdfs/*
+!data/pdfs/.gitkeep
+
+# Vector database
+data/chroma/*
+!data/chroma/.gitkeep
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
