@@ -1,6 +1,4 @@
-Use this shorter, cleaner README till **Day 4**:
 
-````md
 # 🚀 Agentic AI Mastery
 
 A hands-on journey to master **AI Agents, RAG, LangChain, LangGraph, and production-style LLM workflows**.
